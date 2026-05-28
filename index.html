@@ -856,6 +856,7 @@
     max-width: 540px;
     margin: 0 auto 2.5rem;
     letter-spacing: -0.02em;
+    text-wrap: balance;
   }
   .cta-title em { font-style: italic; color: var(--teal); }
 
@@ -1047,6 +1048,7 @@
     letter-spacing: -0.02em;
     font-style: italic;
     font-weight: 500;
+    text-wrap: balance;
   }
 
   /* ── INEVITABILIDADE ── */
@@ -1069,6 +1071,7 @@
     line-height: 1.75;
     color: rgba(245,240,232,0.55);
     letter-spacing: 0.01em;
+    text-wrap: balance;
   }
 
   /* Accordion */
@@ -1112,6 +1115,7 @@
     gap: 0.65rem;
   }
   .accord-num {
+    display: none;
     font-family: 'Geist', sans-serif;
     font-size: 0.58rem;
     font-weight: 700;
@@ -1170,6 +1174,7 @@
     color: var(--warm-white);
     letter-spacing: -0.02em;
     text-align: center;
+    text-wrap: balance;
   }
 
   /* ── RESPONSIVE ── */
@@ -1194,7 +1199,7 @@
     footer { flex-direction: column; text-align: center; }
     .quem-jaque .expert-inner, .quem-nil .expert-inner { display: flex; flex-direction: column; gap: 0; }
     .quem-jaque .expert-inner .expert-tag, .quem-nil .expert-inner .expert-tag { padding-top: 1.8rem; margin-bottom: 1.2rem; }
-    .quem-jaque .expert-inner .expert-photo, .quem-nil .expert-inner .expert-photo { margin-left: -5vw; width: 100vw; border-radius: 0; margin-bottom: 2.5rem; }
+    .quem-jaque .expert-inner .expert-photo, .quem-nil .expert-inner .expert-photo { margin-left: -5vw; width: 100vw; border-radius: 0; margin-bottom: 0; margin-top: 0; }
     .quem-jaque .expert-inner .expert-photo img, .quem-nil .expert-inner .expert-photo img { height: auto; aspect-ratio: 4/5; }
     .quem-jaque .expert-inner .expert-text, .quem-nil .expert-inner .expert-text { grid-column: auto; grid-row: auto; }
     .juntos-inner { grid-template-columns: 1fr; gap: 3rem; }
@@ -1289,9 +1294,13 @@
 
     /* ── SECTION PADDINGS ── */
     .dor-section, .metodo-section, .entregaveis, .porque-section, .processo-section,
-    .quem-jaque, .quem-nil, .juntos-section, .exclusividade, .cta-section {
+    .juntos-section, .exclusividade, .cta-section {
       padding: 4.5rem 1.25rem;
     }
+    .quem-jaque, .quem-nil { padding: 0; }
+    .quem-jaque .expert-text, .quem-nil .expert-text { padding: 2.5rem 1.25rem 4.5rem; }
+    .quem-jaque .expert-inner .expert-photo,
+    .quem-nil .expert-inner .expert-photo { margin-left: 0; width: 100%; }
     .prova-section { padding: 4.5rem 1.25rem !important; }
 
     /* ── SECTION EYEBROW ── */
@@ -1520,7 +1529,9 @@
     .hero-subtitle { font-size: 0.97rem; }
     .btn-primary, .btn-ghost { font-size: 0.76rem; padding: 0.95rem 1.2rem; }
     .dor-section, .metodo-section, .entregaveis, .porque-section, .processo-section,
-    .quem-jaque, .quem-nil, .juntos-section, .exclusividade, .cta-section { padding: 4rem 1rem; }
+    .juntos-section, .exclusividade, .cta-section { padding: 4rem 1rem; }
+    .quem-jaque, .quem-nil { padding: 0; }
+    .quem-jaque .expert-text, .quem-nil .expert-text { padding: 2rem 1rem 4rem; }
     .prova-section { padding: 4rem 1rem !important; }
     .manifesto-section { padding: 4.5rem 1rem 2rem; }
     .inevitabilidade-section { padding: 2rem 1rem 4.5rem; }
@@ -1685,6 +1696,7 @@
     color: var(--warm-white);
     margin-bottom: 1.4rem;
     letter-spacing: -0.01em;
+    text-wrap: balance;
   }
   .juntos-title em { font-style: italic; color: var(--teal); }
 
@@ -1785,7 +1797,7 @@
   <div class="dor-header">
     <div class="dor-header-title reveal">
       <div class="section-eyebrow">O que está travando sua agenda</div>
-      <h2 class="section-title">Você atende bem.<br>A família sai satisfeita.<br>E mesmo assim tem semanas em que a agenda <em>não fecha.</em></h2>
+      <h2 class="section-title">Você atende bem.<br>A família sai satisfeita.<br>E mesmo assim tem semanas em que a agenda&nbsp;<em>não fecha.</em></h2>
     </div>
     <div class="dor-narrative reveal">
     <p>Não é falta de competência. É falta de visibilidade para as famílias certas.</p>
@@ -1825,7 +1837,7 @@
 <section class="manifesto-section">
   <div class="manifesto-inner reveal">
     <p class="manifesto-statement">
-      Quando a mãe chega até você,<br>ela já decidiu<br>se sente segurança.
+      Quando a mãe chega até você,<br>ela já decidiu<br>se sente&nbsp;segurança.
     </p>
   </div>
 </section>
@@ -1836,7 +1848,7 @@
 
     <div class="inev-header reveal">
       <div class="section-eyebrow" style="justify-content:center;">Primeira Consulta</div>
-      <p class="inev-intro">Hoje, a primeira consulta<br>não começa no consultório.</p>
+      <p class="inev-intro">Hoje, a primeira consulta<br>não começa no&nbsp;consultório.</p>
     </div>
 
     <div class="inev-accordion reveal">
@@ -1919,7 +1931,7 @@
   <div class="metodo-bg">MÉTODO</div>
   <div class="reveal">
     <div class="section-eyebrow on-light">Como a gente trabalha</div>
-    <h2 class="section-title dark">Um método<br>construído<br>para pediatria.<br>Não para <em>saúde em geral.</em></h2>
+    <h2 class="section-title dark">Um método<br>construído<br>para pediatria.<br>Não para&nbsp;<em>saúde em geral.</em></h2>
     <p class="section-sub dark">Toda clínica pediátrica cresce em três etapas. O problema é que a maioria tenta encher a agenda antes de construir confiança. A gente organiza esse crescimento na ordem certa.</p>
   </div>
 
@@ -1958,7 +1970,7 @@
   <div class="porque-inner">
     <div class="reveal" style="text-align:center;">
       <div class="section-eyebrow" style="justify-content:center;">Por que a Pixel Rain</div>
-      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Qualquer agência faz anúncio.<br>A gente só faz <em>pediatria.</em></h2>
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Qualquer agência faz anúncio.<br>A gente só faz&nbsp;<em>pediatria.</em></h2>
       <p class="section-sub" style="margin-left:auto;margin-right:auto;">Não é slogan. É uma escolha que muda tudo o que conseguimos entregar.</p>
     </div>
 
@@ -1991,7 +2003,7 @@
 <section class="processo-section">
   <div class="reveal" style="text-align:center;">
     <div class="section-eyebrow on-light" style="justify-content:center;">Como começa</div>
-    <h2 class="section-title dark" style="margin-left:auto;margin-right:auto;">Do primeiro contato<br>ao resultado em <em>30 dias.</em></h2>
+    <h2 class="section-title dark" style="margin-left:auto;margin-right:auto;">Do primeiro contato<br>ao resultado em&nbsp;<em>30 dias.</em></h2>
     <p class="section-sub dark" style="margin-left:auto;margin-right:auto;">Sem apresentação de portfólio. Sem reunião genérica. Começamos pelo que importa para a sua clínica agora.</p>
   </div>
 
@@ -2023,7 +2035,7 @@
 <section class="exclusividade">
   <div class="excl-inner">
     <div class="reveal">
-      <h2 class="excl-title">Hoje tem uma<br>vaga no seu bairro.<br><em>Amanhã, talvez não.</em></h2>
+      <h2 class="excl-title">Hoje tem uma<br>vaga no seu&nbsp;bairro.<br><em>Amanhã, talvez não.</em></h2>
       <p class="excl-text">Cada cliente fecha com exclusividade geográfica. Quando um pediatra entra, o bairro dele trava. Enquanto você for cliente, nenhum concorrente da mesma área recebe o mesmo serviço, por cláusula contratual, não por promessa verbal.<br><br>Pode ser você. Ou pode ser a clínica na quadra de baixo.</p>
       <div class="excl-highlight">
         <span class="excl-highlight-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--teal);flex-shrink:0"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span>
@@ -2081,7 +2093,7 @@
       <div class="expert-tag">A estratégia que transforma percepção em&nbsp;presença</div>
     </div>
     <div class="expert-text reveal">
-      <h2 class="expert-name">Ele está em cada consulta.<br>Ao lado da Jaque.<br><em>Observando o que você não vê.</em></h2>
+      <h2 class="expert-name">Ele está em cada consulta.<br>Ao lado&nbsp;da&nbsp;Jaque.<br><em>Observando o que você não vê.</em></h2>
       <p class="expert-body">
         Nil conhece a sala de espera do consultório pediátrico de dentro, não pela teoria, mas pela vivência. O que ele observa nessa jornada, antes de entrar, durante a espera e depois de sair, vira base de cada estratégia que constrói.
       </p>
