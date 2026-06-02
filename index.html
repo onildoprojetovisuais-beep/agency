@@ -1199,9 +1199,9 @@
     footer { flex-direction: column; text-align: center; }
     .quem-jaque .expert-inner, .quem-nil .expert-inner { display: flex; flex-direction: column; gap: 0; }
     .quem-jaque .expert-inner .expert-tag, .quem-nil .expert-inner .expert-tag { padding-top: 1.8rem; margin-bottom: 1.2rem; }
-    .quem-jaque .expert-inner .expert-photo, .quem-nil .expert-inner .expert-photo { margin-left: -5vw; width: 100vw; border-radius: 0; margin-bottom: 0; margin-top: 0; }
-    .quem-jaque .expert-inner .expert-photo img, .quem-nil .expert-inner .expert-photo img { height: auto; aspect-ratio: 4/5; }
-    .quem-jaque .expert-inner .expert-text, .quem-nil .expert-inner .expert-text { grid-column: auto; grid-row: auto; }
+    .quem-jaque .expert-inner .expert-photo, .quem-nil .expert-inner .expert-photo { margin-left: -5vw; width: 100vw; border-radius: 0; margin-bottom: 0; margin-top: 0; aspect-ratio: 4/5; }
+    .quem-jaque .expert-inner .expert-photo img, .quem-nil .expert-inner .expert-photo img { position: relative; inset: auto; height: 100%; aspect-ratio: unset; }
+    .quem-jaque .expert-inner .expert-text, .quem-nil .expert-inner .expert-text { grid-column: auto; grid-row: auto; display: block; padding: 0; }
     .juntos-inner { grid-template-columns: 1fr; gap: 3rem; }
     .dor-section, .metodo-section, .entregaveis, .porque-section, .processo-section,
     .juntos-section, .exclusividade, .cta-section { padding-top: 5rem; padding-bottom: 5rem; }
